@@ -1,0 +1,124 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "9acf3d58c11e603162eaa4cdef736069",
+    "entities": [
+      {
+        "tableName": "crypto_database",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `symbol` TEXT NOT NULL, `imgURL` TEXT NOT NULL, `last_updated` TEXT NOT NULL, `price` REAL NOT NULL, `percent_change_1h` REAL NOT NULL, `percent_change_24h` REAL NOT NULL, `percent_change_7d` REAL NOT NULL, `data_change_day` TEXT NOT NULL, `data_change_week` TEXT NOT NULL, `data_change_month` TEXT NOT NULL, `data_change_three_month` TEXT NOT NULL, `data_change_six_month` TEXT NOT NULL, `data_change_year` TEXT NOT NULL, `data_change_allTime` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgURL",
+            "columnName": "imgURL",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "last_updated",
+            "columnName": "last_updated",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_1h",
+            "columnName": "percent_change_1h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_24h",
+            "columnName": "percent_change_24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_7d",
+            "columnName": "percent_change_7d",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_day",
+            "columnName": "data_change_day",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_week",
+            "columnName": "data_change_week",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_month",
+            "columnName": "data_change_month",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_three_month",
+            "columnName": "data_change_three_month",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_six_month",
+            "columnName": "data_change_six_month",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_year",
+            "columnName": "data_change_year",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data_change_allTime",
+            "columnName": "data_change_allTime",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9acf3d58c11e603162eaa4cdef736069')"
+    ]
+  }
+}

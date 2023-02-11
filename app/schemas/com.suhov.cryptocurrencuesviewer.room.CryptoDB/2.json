@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "f8b7b67cde52d8666529950f0860e55e",
+    "entities": [
+      {
+        "tableName": "crypto_database",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `symbol` TEXT NOT NULL, `imgURL` TEXT NOT NULL, `last_updated` TEXT NOT NULL, `price` REAL NOT NULL, `percent_change_1h` REAL NOT NULL, `percent_change_24h` REAL NOT NULL, `percent_change_7d` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgURL",
+            "columnName": "imgURL",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "last_updated",
+            "columnName": "last_updated",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_1h",
+            "columnName": "percent_change_1h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_24h",
+            "columnName": "percent_change_24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percent_change_7d",
+            "columnName": "percent_change_7d",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f8b7b67cde52d8666529950f0860e55e')"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="4dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="10dp"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_crypto"
+            android:padding="4dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/title_crypto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            tools:text="EPH"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/img_crypto"
+            app:layout_constraintTop_toTopOf="@+id/img_crypto" />
+
+        <TextView
+            android:id="@+id/full_name_crypto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="EPH"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@id/title_crypto"
+            app:layout_constraintTop_toTopOf="@+id/img_crypto" />
+
+        <TextView
+            android:id="@+id/price_crypto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            tools:text="$1,212.01"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/title_crypto"
+            app:layout_constraintStart_toStartOf="@+id/title_crypto"
+            app:layout_constraintTop_toTopOf="@+id/title_crypto" />
+
+        <ImageView
+            android:id="@+id/one_day"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_crypto"
+            app:layout_constraintStart_toStartOf="@+id/title_crypto"
+            app:srcCompat="@drawable/day" />
+
+        <TextView
+            android:id="@+id/market_dynamics_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="+ 200.01%"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/one_day"
+            app:layout_constraintStart_toEndOf="@+id/one_day"
+            app:layout_constraintTop_toTopOf="@+id/one_day" />
+
+        <ImageView
+            android:id="@+id/one_hour"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/one_day"
+            app:layout_constraintStart_toStartOf="@+id/price_crypto"
+            app:layout_constraintTop_toTopOf="@+id/one_day"
+            app:srcCompat="@drawable/hour" />
+
+        <TextView
+            android:id="@+id/market_dynamics_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="+ 0.25%"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/one_hour"
+            app:layout_constraintStart_toEndOf="@+id/one_hour"
+            app:layout_constraintTop_toTopOf="@+id/one_hour" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
